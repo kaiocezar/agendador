@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:8.0.32
+    container_name: mysql-agendador
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 91387063
+      MYSQL_DATABASE: agendador
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
